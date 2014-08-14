@@ -1,11 +1,11 @@
 class Person
 
-  def initialize(allergies)
+  def initialize(*allergies)
     @allergies = allergies
     @stomach = []
   end
 
-  def eat(food)
+  def eat(*food)
     check_food(@allergies, food)
     puts "Do you want to eat the food?"
     input = gets.chomp.downcase
